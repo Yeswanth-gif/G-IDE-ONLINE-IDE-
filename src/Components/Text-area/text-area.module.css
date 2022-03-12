@@ -1,0 +1,35 @@
+textarea {
+    width: 40vw;
+    height: 31vh;
+    display: inline-block;
+}
+
+.text_container {
+
+    color: black;
+    height: 83vh;
+}
+
+.text_container > h3{
+    text-align: center;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 900;
+
+}
+
+@media screen and (max-width: 900px) {
+    textarea {
+        width: 100vw;
+        display: block;
+    }
+    
+}

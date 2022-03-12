@@ -1,0 +1,35 @@
+.editor_container {
+    width: 100%;
+    border: 2px solid white;
+}
+
+.editor{
+    border: 2px solid white;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+.inputandoutput {
+    width: 90%;
+    margin: 0px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px){
+    .editor_container {
+        width: 100%
+    }
+    .head{
+        display: block;
+    }
+    .inputandoutput {
+        display: block;
+        width: 100vw;
+    }
+    
+}

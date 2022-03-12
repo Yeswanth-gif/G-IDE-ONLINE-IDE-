@@ -1,0 +1,29 @@
+.font_size{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+}
+
+.form_container > span {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form_select:focus {
+    box-shadow: none;
+}
+
+@media screen and (max-width : 400px) {
+    .font_size{
+        display: block;
+    }    
+}

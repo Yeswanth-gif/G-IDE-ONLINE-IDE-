@@ -1,0 +1,14 @@
+.main_section {
+    background-color: navy;
+    /* position: absolute;
+    bottom: 0px; */
+    width: 100%;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main_section > p {
+    margin-top: 20px;
+}
