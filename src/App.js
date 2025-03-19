@@ -1,42 +1,50 @@
-
-import classes from './App.css';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopBar from './Components/Top-Bar/top-bar';
 import Footer from './Components/Footer/footer';
 import Editor from './Components/Main-section/editor';
-import React , {Component} from 'react';
-import Text_area from './Components/Text-area/text-area';
+import React, { Component } from 'react';
+import { loadLanguage, loadTheme, loadFontSize } from './services/storageService';
 
-
-
-class  App extends Component {
-
-  state = {
-    Theme : 'solarized_light',
-    font_size : 10,
-    language : 'cpp', 
+class App extends Component {
+  constructor(props) {
+    super(props);
+    
+    // Initialize state with saved preferences
+    this.state = {
+      Theme: loadTheme(),
+      font_size: loadFontSize(),
+      language: loadLanguage(),
+    };
   }
 
   onthemeclick = (theme) => {
-    this.setState({Theme : theme});
+    this.setState({ Theme: theme });
   }
 
   onfont_size = (font) => {
-    this.setState({font_size : font});
+    this.setState({ font_size: font });
   }
 
   onlanguageclick = (lang) => {
-    this.setState({language : lang});
+    this.setState({ language: lang });
   }
 
-  render (){
+  render() {
     return (
       <div className="App">
-        <TopBar/>
-        <div className={classes.editor_style}>
-           <Editor theme = {this.state.Theme} font_size = {this.state.font_size} language = {this.state.language} onthemeclick = {this.onthemeclick} onfont_size = {this.onfont_size} onlanguageclick = {this.onlanguageclick}/>
+        <TopBar />
+        <div className="editor_style">
+          <Editor 
+            theme={this.state.Theme} 
+            font_size={this.state.font_size} 
+            language={this.state.language} 
+            onthemeclick={this.onthemeclick} 
+            onfont_size={this.onfont_size} 
+            onlanguageclick={this.onlanguageclick}
+          />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

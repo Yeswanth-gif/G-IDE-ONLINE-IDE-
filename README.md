@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# G-IDE Online IDE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, feature-rich online code editor and IDE built with React.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Code Execution**: Execute code in multiple languages (C++, Java, Python) using the Judge0 API
+- **Syntax Highlighting**: Powered by Ace Editor with support for multiple languages
+- **Code Formatting**: Format your code with a single click
+- **Theme Selection**: Choose from multiple editor themes (Solarized Light, Solarized Dark, Monokai)
+- **Font Size Adjustment**: Customize the editor font size
+- **Keyboard Shortcuts**: Boost productivity with common IDE shortcuts
+- **Local Storage**: Automatically saves your code, language, theme, and font size preferences
+- **Error Handling**: Clear display of compilation and runtime errors
+- **Responsive Design**: Works on desktop and mobile devices
 
-### `npm start`
+## Keyboard Shortcuts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `Ctrl+S`: Save code
+- `Ctrl+R`: Run code
+- `Ctrl+Shift+F`: Format code
+- `Ctrl+Shift+L`: Toggle light/dark theme
+- `Ctrl+=`: Increase font size
+- `Ctrl+-`: Decrease font size
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React
+- Ace Editor
+- Judge0 API (for code execution)
+- Prettier (for code formatting)
+- Bootstrap (for UI components)
+- Local Storage API (for saving preferences)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js and npm installed on your machine
+- A RapidAPI key for the Judge0 API (for code execution)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/Yeswanth-gif/G-IDE-ONLINE-IDE-.git
+   cd G-IDE-ONLINE-IDE-
+   ```
 
-### `npm run eject`
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Configure the Judge0 API:
+   - Sign up for a free API key at [RapidAPI](https://rapidapi.com/judge0-official/api/judge0-ce)
+   - Open `src/services/codeExecutionService.js` and replace `'YOUR_RAPIDAPI_KEY'` with your actual API key
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+To deploy the application to GitHub Pages:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run deploy
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Judge0](https://judge0.com/) for the code execution API
+- [Ace Editor](https://ace.c9.io/) for the code editor
+- [React](https://reactjs.org/) for the UI framework

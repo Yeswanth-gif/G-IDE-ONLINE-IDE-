@@ -2,34 +2,104 @@ textarea {
     width: 40vw;
     height: 31vh;
     display: inline-block;
+    padding: 10px;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
 }
 
 .text_container {
-
     color: black;
     height: 83vh;
+    padding: 0 15px;
 }
 
-.text_container > h3{
+.text_container > h3 {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
 }
 
 .btn {
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 200px;
+    width: 150px;
     background-color: navy;
     color: white;
     padding: 10px;
     border-radius: 10px;
-    font-weight: 900;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.1s;
+}
 
+.btn:hover {
+    background-color: #0000cc;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.run_btn {
+    background-color: #28a745;
+}
+
+.run_btn:hover {
+    background-color: #218838;
+}
+
+.format_btn {
+    background-color: #17a2b8;
+}
+
+.format_btn:hover {
+    background-color: #138496;
+}
+
+.error_output {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.error_message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
 }
 
 @media screen and (max-width: 900px) {
     textarea {
-        width: 100vw;
+        width: 100%;
         display: block;
     }
     
+    .text_container {
+        padding: 0 10px;
+    }
+    
+    .button_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 80%;
+    }
 }
